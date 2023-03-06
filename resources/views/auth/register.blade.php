@@ -5,7 +5,7 @@
         </x-slot>
 
         <div class="text-center">
-            <h1 class="text-center">Trgovina Mješovitom robom</h1>
+            <h1 class="text-center">Parfemi za vas</h1>
         </div>
 
         <x-jet-validation-errors class="mb-4" />
