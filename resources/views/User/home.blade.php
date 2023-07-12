@@ -1,109 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <title>Parfemi za vas</title>
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-  />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-  />
-</head>
-
-
-  <body>
-
- 
-  
-
-
-    <header>
-      
-
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-white">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/')}}">Početna <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('proizvodi')}}">Proizvodi</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('onama')}}">O nama</a>
-            </li>
-           
-            <li class="nav-item" style="right: 0px!important;position: absolute!important;">
-                @if (Route::has('login'))
-
-                    @auth
-                    
-
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{url('prikazikosaricu')}}"><i class="fab fa-opencart"></i> Košarica[{{$count}}]</a>
-                    </li>
-                        <x-app-layout> 
-
-                        </x-app-layout>
-                    @else
-                    <li><a href="{{ route('login') }}" class="nav-link"><i class="fas fa-user"></i> Prijava</a></li>
-
-                        @if (Route::has('register'))
-                            <li><a href="{{ route('register') }}" class="nav-link"><i class="fas fa-registered"></i> Registracija</a></li>
-                        @endif
-                    @endauth
-                   
-                @endif
-            </li>
-            </ul>
-        </div>
-    </nav>  
-
-    <p class="h1 mt-5 pt-6 text-center">Online prodaja parfema</p>
-    <figure class="text-center p-6">
-      <blockquote class="blockquote">
-        <p>Mjesto gdje možete kupiti parfem.</p>
-        <a class="text-center btn btn-dark" href="https://drive.google.com/file/d/1NGL7ExJLBlrBOzkituzHj6rC5_s_y1a6/view?usp=sharing">Vizija</a>
-      </blockquote>
-      <figcaption class="blockquote-footer">
-         <cite title="Source Title">Parfemi za vas</cite>
-         
-      </figcaption>
-    </figure>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
     
+    <script
+      src="https://kit.fontawesome.com/9bf143935f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
 
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <header>
+        <nav class="navbar navbar-expand-sm nav-costum mt-2 mb-3">
+          <div class="container-fluid" style="margin: auto; padding: 0">
+            <a class="navbar-brand naslovbrend">Prodaja parfema</a>
+            <button
+              class="navbar-toggler expand-button-costum btn"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"
+                ><i
+                  class="fa-solid fa-bars fa-lg icon-menu-custom"
+                  style="color: #ffb577"
+                ></i
+              ></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav nav nav-left flex-grow-1 ms-auto">
+                <li class="nav-item px-3">
+                  <a class="nav-link navlink" href="{{url('/')}}">Home</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link navlink" href="{{url('proizvodi')}}">Parfemi</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link navlink" href="{{url('onama')}}">O nama</a>
+                </li>
 
-    </header>
-
-   
-
-   
-
-
-    <div class="latest-products">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Najnoviji parfemi</h2>
-              <a href="{{url('proizvodi')}}">Svi parfemi <i class="fa fa-angle-right"></i></a>
+                
+                <li class="nav-item" style="right: 0px!important;position: absolute!important;">
+                  @if (Route::has('login'))
+  
+                      @auth
+                      
+  
+                      <li class="nav-item ">
+                      <a class="nav-link navlink text-white " href="{{url('prikazikosaricu')}} " ><i class="fab fa-opencart" style="color: #ffb577"></i> Košarica</a>
+                      </li>
+                          <x-app-layout> 
+  
+                          </x-app-layout>
+                      @else
+                      <li class="nav-item px-3"><a href="{{ route('login') }}" class="nav-link navlink"><i class="fa-solid fa-right-to-bracket fa-xs"  style="color: #ffb577"></i> Prijava</a></li>
+  
+                          @if (Route::has('register'))
+                              <li class="nav-item px-3"><a href="{{ route('register') }}" class="nav-link navlink px-3"><i class="fa-regular fa-registered fa-xs"  style="color: #ffb577"></i> Registracija</a></li>
+                          @endif
+                      @endauth
+                     
+                  @endif
+              </ul>
             </div>
           </div>
+        </nav>
+      </header>
 
+      <main class="mt-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-6 naslov-card">
+              <h1 class="naslov">Online Prodaja Parfema</h1>
+              <p class="mt-5">Prodajemo parfeme po povoljnim cijenama</p>
+
+              <a  href="{{url('proizvodi')}}" class="btn dugme mt-5">
+                Pogledajte ponudu
+              </a>
+            </div>
+            <div class="col-6">
+              <div class="img-wrapper">
+                <img class="slikaparfem" src="https://i.ibb.co/CbjcrDT/parfemihome.jpg" alt="parfemi" />
+              </div>
+            </div>
+          </div>
+        
+      </main>
+
+
+      <section class="mt-5 mb-5">
+        <div class="homepage-box">
+          <h2 class="header2">Najnoviji parfemi</h2>
+          <a class="home-a" href="{{url('proizvodi')}}">POGLEDAJTE SVE PARFEME</a>
+        </div>
+      </section>
+      
+
+        <div class="kutija">
           @foreach($data as $proizvod)
-          <div class="col-md-4">
-            <div class="product-item">
+          <div class="col-md-4 ">
+            <div class="product-item" style="max-width:200px; height:auto">
               <a href="#"><img height="300" class="img-fluid" src="/productimage/{{$proizvod->slika}}" alt=""></a>
               <div class="down-content">
                 <h4>{{ $proizvod->naziv }}</h4>
@@ -114,12 +138,13 @@
                 <input type="number" value="1" min="1" class="form-control"  style="width:100px" name="kolicina">
                 <br>
 
-                  <input style="background-color: #2A93D5" class="btn btn-primary" type="submit" value="U košaricu">
+                  <input style="background-color: #ffb577" class="btn dugme" type="submit" value="U košaricu">
               </form>
               </div>
             </div>
           </div>
         @endforeach
+      </div>
          
 
 
@@ -127,25 +152,15 @@
       </div>
     </div>
 
-    
-
-
    
 
+
     
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    
+  </div>
 
-
+</div>
   
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -154,19 +169,6 @@
 
     
     
-
-
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; 
-      function clearField(t){                  
-      if(! cleared[t.id]){                     
-          cleared[t.id] = 1;  
-          t.value='';         
-          t.style.color='#fff';
-          }
-      }
-    </script>
-
 
   </body>
 

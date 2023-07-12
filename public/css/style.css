@@ -1,0 +1,116 @@
+body {
+    background-color: #2e2d33;
+    color: #ffffff;
+}
+.navlink {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+}
+.navlink:hover {
+    color: #ffb577;
+}
+.naslovbrend {
+    font-family: "Poppins", sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+    color: #ffb577;
+}
+.naslovbrend:hover {
+    color: #ffb577;
+}
+.body-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+.image-wrapper {
+    max-width: 600px;
+}
+.slikaparfem {
+    max-height: 600px;
+    height: 100%;
+    width: auto;
+}
+main {
+    display: flex;
+}
+.naslov {
+    font-family: "Playfair Display", serif;
+
+    font-size: 56px;
+    line-height: 68px;
+}
+p {
+    color: #b8b8b8;
+    font-size: 16px;
+    line-height: 28px;
+}
+.dugme {
+    color: #2e2d33;
+    background-color: #ffb577;
+}
+.dugme:hover {
+    color: #ffb577;
+    background-color: #2e2d33;
+    border-style: solid;
+    border-color: #ffb577;
+}
+.naslov-card {
+    align-items: center;
+}
+.header2 {
+    font-family: "Poppins", sans-serif;
+}
+.homepage-box {
+    display: flex;
+    justify-content: space-around;
+}
+.home-a {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    color: #ffb577;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+.kartica {
+    background-color: #252529;
+}
+.kartica-naslov {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+}
+.kartica-slika {
+    max-width: 262px;
+    height: 262px;
+}
+.kartice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forma-kartica {
+    background-color: #252529;
+}
+.forma-link {
+    color: #ffb577;
+}
+.forma-link:hover {
+    color: #ffb577;
+    text-decoration: underline;
+}
+
+.sidebar {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.dashboard-main {
+    position: relative;
+    margin-left: 280px;
+}
+table {
+    border: #b8b8b8, 1px, solid;
+}

@@ -1,140 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script
+      src="https://kit.fontawesome.com/9bf143935f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Parfemi za vas</title>
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-  />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-  />
-</head>
-
+    <title>O nama</title>
+  </head>
   <body>
+    <div class="body-wrapper">
+      <header>
+        <nav class="navbar navbar-expand-sm nav-costum mt-2 mb-3">
+          <div class="container-fluid" style="margin: auto; padding: 0">
+            <a class="navbar-brand naslovbrend">Prodaja parfema</a>
+            <button
+              class="navbar-toggler expand-button-costum btn"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"
+                ><i
+                  class="fa-solid fa-bars fa-lg icon-menu-custom"
+                  style="color: #ffb577"
+                ></i
+              ></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav nav nav-left flex-grow-1 ms-auto">
+                <li class="nav-item px-3">
+                  <a class="nav-link navlink" href="{{url('/')}}">Home</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link navlink" href="{{url('proizvodi')}}">Parfemi</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link navlink" href="{{url('onama')}}">O nama</a>
+                </li>
 
- 
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-
-
-    <header class="">
-
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-white">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/')}}">Početna <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('proizvodi')}}">Proizvodi</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('onama')}}">O nama</a>
-            </li>
-            
-            <li class="nav-item" style="right: 0px!important;position: absolute!important;">
-                @if (Route::has('login'))
-
-                    @auth
-                    
-
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{url('prikazikosaricu')}}"><i class="fab fa-opencart"></i> Košarica</a>
-                    </li>
-                        <x-app-layout> 
-
-                        </x-app-layout>
-                    @else
-                    <li><a href="{{ route('login') }}" class="nav-link"><i class="fas fa-user"></i> Prijava</a></li>
-
-                        @if (Route::has('register'))
-                            <li><a href="{{ route('register') }}" class="nav-link"><i class="fas fa-registered"></i> Registracija</a></li>
-                        @endif
-                    @endauth
-                   
-                @endif
-            </li>
-            </ul>
-        </div>
-    </nav>  
-</header>
-<br><br><br><br><br>
-<div class="container">
-    <div class="row">
-    <div class="col-md-4">
-            <div class="product-item">
-            <center><img src="https://i.ibb.co/crrcsdj/Whats-App-Image-2023-03-05-at-12-51-17.jpg" alt="Arijan " border="0" style="height: 400px; width: 310px" class="img-fluid center-block"></center>
-              <div class="down-content">
-                <p>Arijan Delić, dolazim iz Mostara, treća godina računarstva.</p> 
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="product-item">
-            <center><img src="https://i.ibb.co/VYXQyzB/Whats-App-Image-2023-03-05-at-17-27-18.jpg" alt="Josip" style="height: 400px; width: 310px" class="img-fluid center-block" border="0"></center>
-              <div class="down-content">
-                <p>Josip Šekerija, dolazim iz Mostara, treća godina računarstva.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-            <center><img src="https://i.ibb.co/H4t81kb/Whats-App-Image-2023-03-05-at-12-58-10.jpg" alt="Josip" border="0" style="height: 400px; width: 310px" class="img-fluid center-block"></center>
-              <div class="down-content">
-                <p>Josip Galić, dolazim iz Mostara, treća godina računarstva.</p>
-            </div>
-          </div>
-
-
-         
-
-
-
+                
+                <li class="nav-item" style="right: 0px!important;position: absolute!important;">
+                  @if (Route::has('login'))
   
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+                      @auth
+                      
+  
+                      <li class="nav-item">
+                      <a class="nav-link navlink text-white " href="{{url('prikazikosaricu')}}"><i class="fab fa-opencart" style="color: #ffb577"></i> Košarica</a>
+                      </li>
+                          <x-app-layout> 
+  
+                          </x-app-layout>
+                      @else
+                      <li class="nav-item px-3"><a href="{{ route('login') }}" class="nav-link navlink"><i class="fa-solid fa-right-to-bracket fa-xs"  style="color: #ffb577"></i> Prijava</a></li>
+  
+                          @if (Route::has('register'))
+                              <li class="nav-item px-3"><a href="{{ route('register') }}" class="nav-link navlink px-3"><i class="fa-regular fa-registered fa-xs"  style="color: #ffb577"></i> Registracija</a></li>
+                          @endif
+                      @endauth
+                     
+                  @endif
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <h1 class="naslov mb-5">O nama</h1>
+      <main>
+        <div class="row mt-2">
+          <div class="col-4">
+            <div class="card kartica" style="width: 18rem">
+              <img src="https://i.ibb.co/H4t81kb/Whats-App-Image-2023-03-05-at-12-58-10.jpg" class="card-img-top " alt="" />
+              <div class="card-body">
+                <h5 class="card-title kartica-naslov">Josip Galić</h5>
+                <p class="card-text">
+                  Ja sam Josip Galić. Student sam treće godine računarstva.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="card kartica" style="width: 18rem">
+              <img src="https://i.ibb.co/pXMhLjq/josiprwa.jpg" class="card-img-top "  alt="" />
+              <div class="card-body">
+                <h5 class="card-title kartica-naslov">Josip Šekerija</h5>
+                <p class="card-text">
+                  Ja sam Josip Šekerija. Student sam treće godine računarstva.
+                </p>
+              </div>
+            </div>
+          </div>
 
 
-    
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/accordions.js"></script>
+          <div class="col-4">
+            <div class="card kartica" style="width: 18rem">
+              <img src="https://i.ibb.co/crrcsdj/Whats-App-Image-2023-03-05-at-12-51-17.jpg" class="card-img-top "  alt="" />
+              <div class="card-body">
+                <h5 class="card-title kartica-naslov">Arijan Delić</h5>
+                <p class="card-text">
+                  Ja sam Arijan Delič. Student sam treće godine računarstva.
+                </p>
+              </div>
+            </div>
+          </div>
 
 
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; 
-      function clearField(t){                  
-      if(! cleared[t.id]){                     
-          cleared[t.id] = 1;  
-          t.value='';         
-          t.style.color='#fff';
-          }
-      }
-    </script>
-
-
+           </div>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
-
 </html>
